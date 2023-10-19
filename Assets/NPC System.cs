@@ -8,10 +8,13 @@ public class NPCSystem : MonoBehaviour
 
 
     bool player_detect = false;
+    public string line;
+
+    private TMP_Text text;
     // Start is called before the first frame update
     void Start()
     {
-        
+        text = FindObjectOfType<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -19,7 +22,7 @@ public class NPCSystem : MonoBehaviour
     {
         if(player_detect && Input.GetKeyDown(KeyCode.E))
         {
-            print("Tjenis du har GIGANTUS BENIS");
+            text.text = line;
         }
     }
 
@@ -31,11 +34,12 @@ public class NPCSystem : MonoBehaviour
         {
             player_detect = true;
         }
-
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
         player_detect = false;
+        text.text = "";
     }
 }

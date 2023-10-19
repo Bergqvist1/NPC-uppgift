@@ -10,10 +10,13 @@ public class Ströga : MonoBehaviour
 
      static public bool dialog = false;
 
+     private TMP_TextMeshProUGUI text;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        text = FindObjectOfType<TextMEshProUGUI>();
+
     }
 
     // Update is called once per frame
@@ -35,5 +38,8 @@ public class Ströga : MonoBehaviour
         if(Input.GetKey(KeyCode.A)){
             transform.position += new Vector3(-speed * Time.deltaTime,0,0);
         }
+
+
+        
     }
 }
