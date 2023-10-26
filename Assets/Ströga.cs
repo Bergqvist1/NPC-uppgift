@@ -10,12 +10,12 @@ public class Ströga : MonoBehaviour
 
      static public bool dialog = false;
 
-     private TMP_TextMeshProUGUI text;
+    private TMP_Text text;
 
     // Start is called before the first frame update
     void Start()
     {
-        text = FindObjectOfType<TextMEshProUGUI>();
+        text = FindObjectOfType<TextMeshProUGUI>();
 
     }
 
